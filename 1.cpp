@@ -1,19 +1,14 @@
-#include <algorithm>
-#include <iostream>
+#include <cmath>
+#include <cstdio>
 
 int main() {
-  char c[3];
-  while (!std::cin.fail()) {
-    for (int i = 0; i < 3; i++) {
-      std::cin >> c[i];
-    }
-    if (c[1] < c[0]) std::swap(c[1], c[0]);
-    if (c[2] < c[1]) std::swap(c[2], c[1]);
-    if (c[1] < c[0]) std::swap(c[1], c[0]);
-    for (int i = 0; i < 3; i++) {
-      std::cout << c[i] << ' ';
-    }
-    std::cout << std::endl;
+  double x[2], y[2];
+  double a, b;
+  while (std::scanf("%lf%lf%lf%lf", &x[0], &x[1], &y[0], &y[1]) == 4) {
+    a = x[0] - y[0];
+    b = x[1] - y[1];
+    printf("%.2lf\n", std::sqrt(a * a + b * b));
   }
+
   return 0;
 }

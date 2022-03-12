@@ -1,14 +1,12 @@
 #include <cmath>
 #include <cstdio>
 
-int main() {
-  double x[2], y[2];
-  double a, b;
-  while (std::scanf("%lf%lf%lf%lf", &x[0], &x[1], &y[0], &y[1]) == 4) {
-    a = x[0] - y[0];
-    b = x[1] - y[1];
-    printf("%.2lf\n", std::sqrt(a * a + b * b));
-  }
+const double PI = 3.1415927;
 
+int main() {
+  double radiu;
+  while (std::scanf("%lf", &radiu) == 1) {
+    printf("%.3lf\n", 4.0 * PI * radiu * radiu * radiu / 3.0);
+  }
   return 0;
 }
