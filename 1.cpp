@@ -9,6 +9,5 @@ int main() {
     b = x[1] - y[1];
     printf("%.2lf\n", std::sqrt(a * a + b * b));
   }
-
   return 0;
 }
